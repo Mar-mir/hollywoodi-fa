@@ -3,41 +3,181 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>هالیوود فارسی — اخبار سینما، حواشی و فتوشوت</title>
-<meta name="description" content="اخبار هالیوود: سینما + حواشی سلبریتی + فتوشوت — ترجمه خودکار فارسی از Deadline / HR / Variety / E! / JustJared / W / Vogue / VanityFair — با ذکر منبع">
+<title>هالیوود فارسی — حواشی، فتوشوت و اخبار سینما</title>
+<meta name="description" content="اخبار هالیوود: حواشی سلبریتی + فتوشوت + سینما — ترجمه خودکار فارسی با ذکر منبع">
 <style>
-  :root{--bg:#0f0f12;--card:#1a1a1f;--muted:#9aa0a6;--acc:#e11d48;--border:#2a2a30}
-  *{box-sizing:border-box} body{margin:0;font-family:Vazirmatn,system-ui,Tahoma,sans-serif;background:var(--bg);color:#f1f1f3}
-  header{position:sticky;top:0;z-index:10;background:rgba(15,15,18,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+  :root{--bg:#0f0f12;--card:#1a1a1f;--muted:#9aa0a6;--border:#2a2a30}
+  *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Vazirmatn,system-ui,Tahoma,sans-serif;background:var(--bg);color:#f1f1f3}
+  header{position:sticky;top:0;z-index:20;background:rgba(15,15,18,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
   .wrap{max-width:1150px;margin:0 auto;padding:0 20px}
-  .head{display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:16px;flex-wrap:wrap}
-  .brand{display:flex;align-items:center;gap:12px} .logo{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,#e11d48,#f59e0b);display:grid;place-items:center;font-weight:800}
-  h1{margin:0;font-size:22px} .sub{color:var(--muted);font-size:13px}
-  .pill{border:1px solid var(--border);padding:8px 12px;border-radius:999px;color:var(--muted);font-size:12px}
-  .section-title{margin:28px 0 8px;font-size:18px;display:flex;align-items:center;gap:10px}
-  .section-title span{font-size:12px;color:var(--muted);font-weight:400}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px;padding:10px 0 10px}
-  .card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
-  .card-img{height:190px;background:#111;overflow:hidden} .card-img img{width:100%;height:100%;object-fit:cover}
-  .card-body{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
-  .meta{display:flex;gap:8px;align-items:center;font-size:11px} .badge{background:#fff;color:#111;padding:3px 8px;border-radius:999px;font-weight:700;font-size:11px} .date{color:var(--muted)}
-  .title-fa{margin:0;font-size:15px;line-height:1.6} .title-en{margin:0;color:var(--muted);font-size:11.5px;line-height:1.5} .desc{margin:0;color:#d1d5db;font-size:13px;line-height:1.7;min-height:44px}
-  .link{margin-top:auto;display:inline-flex;align-items:center;gap:6px;color:#f87171;text-decoration:none;font-size:13px;font-weight:600}
+  .head{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:12px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:12px} .logo{width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,#ec4899,#f59e0b);display:grid;place-items:center;font-weight:800;font-size:18px}
+  h1{margin:0;font-size:20px} .sub{color:var(--muted);font-size:12px}
+  .pill{border:1px solid var(--border);padding:6px 12px;border-radius:999px;color:var(--muted);font-size:11px}
+  /* nav */
+  .nav{display:flex;gap:8px;flex-wrap:wrap;padding:0 0 12px}
+  .nav a{text-decoration:none;font-size:13px;font-weight:700;padding:8px 14px;border-radius:999px;border:1px solid var(--border);color:#e5e7eb;transition:.15s}
+  .nav a:hover{transform:translateY(-1px)}
+  .nav a.n-celeb{background:linear-gradient(135deg,#831843,#be185d);border-color:#9d174d}
+  .nav a.n-photo{background:linear-gradient(135deg,#1e3a5f,#0e7490);border-color:#0e7490}
+  .nav a.n-industry{background:linear-gradient(135deg,#422006,#92400e);border-color:#78350f;color:#fef3c7}
+  /* sections */
+  .section{border-radius:20px;padding:18px 16px 14px;margin:18px 0;border:1px solid var(--border)}
+  .section.s-celeb{background:linear-gradient(180deg,#1a0a14 0%,#1a1a1f 55%);border-color:#4c0520; --acc:#ec4899; --acc2:#fce7f3}
+  .section.s-photo{background:linear-gradient(180deg,#0a1828 0%,#0f1e2e 100%);border-color:#164e63; --acc:#38bdf8; --acc2:#e0f2fe}
+  .section.s-industry{background:linear-gradient(180deg,#1a1405 0%,#1a1a1f 60%);border-color:#78350f; --acc:#f59e0b; --acc2:#fef3c7}
+  .section-head{display:flex;align-items:center;gap:10px;margin:0 0 14px}
+  .section-head .dot{width:10px;height:10px;border-radius:50%;background:var(--acc)}
+  .section-title{margin:0;font-size:18px} .section-sub{font-size:11px;color:var(--muted)} 
+  .section.s-celeb .badge{background:var(--acc);color:#fff} .section.s-celeb .link{color:#f9a8d4}
+  .section.s-photo .badge{background:var(--acc);color:#082f49} .section.s-photo .link{color:#7dd3fc}
+  .section.s-industry .badge{background:var(--acc);color:#422006} .section.s-industry .link{color:#fcd34d}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+  .card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;backdrop-filter:blur(2px)}
+  .card-img{height:190px;background:#111;overflow:hidden} .card-img img{width:100%;height:100%;object-fit:cover;display:block}
+  .photo-card .card-img{height:280px}
+  .card-body{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .meta{display:flex;gap:8px;align-items:center;font-size:11px} .badge{padding:3px 9px;border-radius:999px;font-weight:800;font-size:10px;letter-spacing:.02em} .date{color:var(--muted)}
+  .title-fa{margin:0;font-size:15px;line-height:1.65} .title-en{margin:0;color:var(--muted);font-size:11.5px;line-height:1.5} .desc{margin:0;color:#d1d5db;font-size:13px;line-height:1.7;min-height:44px}
+  .link{margin-top:auto;display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-size:13px;font-weight:700}
   .link:hover{text-decoration:underline}
-  footer{border-top:1px solid var(--border);padding:18px 0;color:var(--muted);font-size:12px;text-align:center}
-  .notice{background:#1f1a1a;border:1px solid #3a2020;color:#fca5a5;padding:10px 14px;border-radius:10px;margin:14px 0;font-size:13px;line-height:1.7}
-  .photo-card .card-img img{object-fit:cover}
+  footer{border-top:1px solid var(--border);padding:18px 0;color:var(--muted);font-size:12px;text-align:center;margin-top:10px}
+  .notice{background:#1f1a1a;border:1px solid #3a2020;color:#fca5a5;padding:10px 14px;border-radius:12px;margin:14px 0;font-size:13px;line-height:1.7}
 </style>
 </head>
 <body>
-<header><div class="wrap head">
-  <div class="brand"><div class="logo">HW</div><div><h1>هالیوود فارسی</h1><div class="sub">سینما + حواشی + فتوشوت — ترجمه  Yandex/MyMemory/Google · هر روز ۸:۰۰ و ۱۶:۰۰ تهران</div></div></div>
-  <div class="pill">آخرین بروزرسانی: 2026-09-08 00:32 — تهران · 18 خبر</div>
+<header><div class="wrap">
+  <div class="head">
+    <div class="brand"><div class="logo">HW</div><div><h1>هالیوود فارسی</h1><div class="sub">حواشی + فتوشوت + سینما — ترجمه Yandex/MyMemory/Google · هر روز ۸:۰۰ و ۱۶:۰۰ تهران</div></div></div>
+    <div class="pill">آخرین بروزرسانی: 2026-09-08 00:35 — تهران · 20 خبر</div>
+  </div>
+  <nav class="nav" aria-label="بخشها">
+    <a class="n-celeb" href="#celeb">✨ حواشی سلبریتی</a>
+    <a class="n-photo" href="#photo">📸 فتوشوت‌ها</a>
+    <a class="n-industry" href="#industry">🎬 اخبار سینما</a>
+  </nav>
 </div></header>
 <main class="wrap">
-  <div class="notice">تمام اخبار و فتوشوت‌ها با ذکر منبع اصلی منتشر می‌شود. ترجمه هیبریدی (حدود ۳۵٪ Yandex و مابقی MyMemory + فالبک Google) — برای متن/عکس دقیق به لینک منبع مراجعه کنید.</div>
-  <h2 class="section-title">🎬 اخبار سینما و صنعت <span>Deadline · Hollywood Reporter · Variety</span></h2>
-  <div class="grid">
+  <div class="notice">تمام اخبار و فتوشوت‌ها با ذکر منبع اصلی منتشر می‌شود. هر بخش پالت رنگی جدا دارد — برای متن/عکس دقیق به لینک منبع مراجعه کنید.</div>
+  <section id="celeb" class="section s-celeb">
+    <div class="section-head"><span class="dot"></span><h2 class="section-title">✨ حواشی سلبریتی‌ها</h2><span class="section-sub">E! Online · Just Jared · ET Online</span></div>
+    <div class="grid">
+        <article class="card">
+          <div class="card-img"><img src="https://akns-images.eonline.com/eol_images/Entire_Site/20260907/a6096678-0b8d-4a06-852a-7c0aee4625c6_1788804989.jpg" loading="lazy" onerror="this.style.display='none'"></div>
+          <div class="card-body">
+            <div class="meta"><span class="badge">E! Online</span><span class="date">Mon, 07 Sep 2026</span></div>
+            <h2 class="title-fa">آخرین فراخوان برای پیشنهادهای مراقبت از پوست آبرسان زیر ۵۰ دلار برای روز کارگر</h2>
+            <p class="title-en">Last Call for Hydrating Skincare Deals Under $50 for Labor Day</p>
+            <p class="desc">&lt;img src=&quot;https://akns-images.eonline.com/eol_images/Entire_Site/20260907/a6096678-0b8d-4a06-852a-7c0aee4625c6_1788804989.jpg?fit=around|660:660&quot; height=&quot;660&quot; width=&quot;660&quot; border=&quot;0&quot; alt=&quot;تخفیف‌های پوست مرطوب‌کننده LDW THUMB.jpg&quot; align=&quot;left&quot; hspace=&quot;5&quot; /&gt; اگر تا آخرین لحظه برای خرید روز کارگر صبر کرده‌اید، هنوز دیر نشد</p>
+            <a class="link" href="&lt;![CDATA[https://www.eonline.com/news/1435815/best-labor-day-2026-skincare-sale-hydrating-serums-moisturizers-under-s50?cmpid=rss-syndicate-genericrss-us-top_stories]]&gt;" target="_blank" rel="noopener">منبع اصلی — E! Online ↗</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img"></div>
+          <div class="card-body">
+            <div class="meta"><span class="badge">Just Jared</span><span class="date">Mon, 07 Sep 2026</span></div>
+            <h2 class="title-fa">رتبه‌بندی خورش‌های رئیس رستوران «Below Deck» بر اساس فالوورهای اینستاگرام، از کمترین تا بیشترین</h2>
+            <p class="title-en">‘Below Deck’ Franchise Chief Stews Ranked by Instagram Followers, From Lowest to Highest</p>
+            <p class="desc">سریال Bravo The Below Deck در طول سال‌ها محبوبیت زیادی پیدا کرده است، و بازیگران آن نیز همینطور! از زمان اولین پخش خود در سال ۲۰۱۳، این رئالیتی شو چهار اسپین‌آف مختلف داشته است و در هر کدام از آنها تغییرات متعددی در بازیگران رخ داده است، و چند ستاره به دنبال تغییر فرنچایز خود هستند. یکی از مشاغل برتر در Below Deck، رئی</p>
+            <a class="link" href="https://www.justjared.com/2026/09/07/below-deck-franchise-chief-stews-ranked-by-instagram-followers-from-lowest-to-highest/" target="_blank" rel="noopener">منبع اصلی — Just Jared ↗</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img"><img src="https://akns-images.eonline.com/eol_images/Entire_Site/20260907/b35aa8d4-6a49-4bd0-ad26-7ce3c1dee6c6_1788811608.jpg" loading="lazy" onerror="this.style.display='none'"></div>
+          <div class="card-body">
+            <div class="meta"><span class="badge">E! Online</span><span class="date">Mon, 07 Sep 2026</span></div>
+            <h2 class="title-fa">بلک چاینا هدیه ۱۴۰ هزار دلاری که در دوران آشنایی به راب کارداشیان داده بود را فاش کرد</h2>
+            <p class="title-en">Blac Chyna Reveals $140,000 Gift She Gave Rob Kardashian While Dating</p>
+            <p class="desc">&lt;img src=&quot;https://akns-images.eonline.com/eol_images/Entire_Site/20260907/b35aa8d4-6a49-4bd0-ad26-7ce3c1dee6c6_1788811608.jpg?fit=around|660:660&quot; height=&quot;660&quot; width=&quot;660&quot; border=&quot;0&quot; alt=&quot;راب کارداشیان، بلک چاینا&quot; align=&quot;left&quot; hspace=&quot;5&quot; /&gt; بلک چاینا رسیدهایش را نگه داشته است. تقریباً 10 سال پس از جدایی‌اش از راب کارداش</p>
+            <a class="link" href="&lt;![CDATA[https://www.eonline.com/news/1435824/blac-chyna-bought-rob-kardashian-s150-000-car-while-dating?cmpid=rss-syndicate-genericrss-us-top_stories]]&gt;" target="_blank" rel="noopener">منبع اصلی — E! Online ↗</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img"></div>
+          <div class="card-body">
+            <div class="meta"><span class="badge">Just Jared</span><span class="date">Mon, 07 Sep 2026</span></div>
+            <h2 class="title-fa">«قطره» چه ارتباطی با «بارش برف» دارد؟ بازیگران قدیمی، زمان پخش و نکاتی که باید بدانید</h2>
+            <p class="title-en">How Does ‘The Drop’ Connect to ‘Snowfall’? Returning Cast, Premiere Time &amp; What to Know</p>
+            <p class="desc">سریال «قطره» (The Drop) یک سریال جدید شبکه FX است که این هفته پخش می‌شود و اسپین‌آف سریال تحسین‌شده‌ی «بارش برف» (Snowfall) محسوب می‌شود. این سریال جدید در روز سه‌شنبه، ۸ سپتامبر ۲۰۲۶، ساعت ۹ شب به وقت شرق آمریکا/۶ بعد از ظهر به وقت اقیانوس آرام، از شبکه‌های FX و Hulu پخش خواهد شد و قسمت‌های آن به صورت بین‌المللی از طر</p>
+            <a class="link" href="https://www.justjared.com/2026/09/07/how-does-the-drop-connect-to-snowfall-returning-cast-premiere-time-what-to-know/" target="_blank" rel="noopener">منبع اصلی — Just Jared ↗</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img"><img src="https://akns-images.eonline.com/eol_images/Entire_Site/20260907/ac0cb0a3-74e7-4422-84f4-7d6554ec3e8e_1788811075.jpg" loading="lazy" onerror="this.style.display='none'"></div>
+          <div class="card-body">
+            <div class="meta"><span class="badge">E! Online</span><span class="date">Mon, 07 Sep 2026</span></div>
+            <h2 class="title-fa">میلی بابی براون و جیک بونجیوی دختر بچه‌شان را به تعطیلات ایتالیا بردند</h2>
+            <p class="title-en">Millie Bobby Brown, Jake Bongiovi Take Baby Girl on Italian Vacation</p>
+            <p class="desc">&lt;img src=&quot;https://akns-images.eonline.com/eol_images/Entire_Site/20260907/ac0cb0a3-74e7-4422-84f4-7d6554ec3e8e_1788811075.jpg?fit=around|660:660&quot; height=&quot;660&quot; width=&quot;660&quot; border=&quot;0&quot; alt=&quot;میلی بابی براون، جیک بونگیووی&quot; align=&quot;left&quot; hspace=&quot;5&quot; /&gt; میلی بابی براون زندگی شیرینی را سپری می‌کند. ستاره سریال «چیزهای عجیب» نگاه</p>
+            <a class="link" href="&lt;![CDATA[https://www.eonline.com/news/1435822/millie-bobby-brown-husband-jake-bongiovi-take-baby-girl-on-italy-vacation?cmpid=rss-syndicate-genericrss-us-top_stories]]&gt;" target="_blank" rel="noopener">منبع اصلی — E! Online ↗</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-img"></div>
+          <div class="card-body">
+            <div class="meta"><span class="badge">Just Jared</span><span class="date">Mon, 07 Sep 2026</span></div>
+            <h2 class="title-fa">آیا آیدان کوئین در «جادوی عملی ۲» حضور دارد؟</h2>
+            <p class="title-en">Is Aidan Quinn in ‘Practical Magic 2’?</p>
+            <p class="desc">متاسفانه آیدان کوئین با وجود بازی در فیلم اصلی محصول سال ۱۹۹۸، جزو بازیگران فیلم Practical Magic 2 نیست. این بازیگر ۶۷ ساله در فیلم اول نقش کارآگاه گری هالت را بازی کرد که معشوقه شخصیت سالی اوونز با بازی ساندرا بولاک شد. چرا آیدان کوئین در Practical Magic 2 نیست؟ آیدان در فوریه ۲۰۲۶ در گفتگویی با SPIN 1038 فاش کرد که ا</p>
+            <a class="link" href="https://www.justjared.com/2026/09/07/is-aidan-quinn-in-practical-magic-2/" target="_blank" rel="noopener">منبع اصلی — Just Jared ↗</a>
+          </div>
+        </article></div>
+  </section>
+  <section id="photo" class="section s-photo">
+    <div class="section-head"><span class="dot"></span><h2 class="section-title">📸 فتوشوت‌ها</h2><span class="section-sub">W Magazine · Vogue · Vanity Fair — عکس HQ</span></div>
+    <div class="grid">
+        <article class="card photo-card">
+          <div class="card-img" style="height:280px"><img src="https://assets.vogue.com/photos/6a9eba761917411389af6147/master/pass/VB-GS-NYC-ARTICLE-STORY.jpg" loading="lazy" onerror="this.style.display='none'"></div>
+          <div class="card-body">
+            <div class="meta"><span class="badge">Vogue</span><span class="date">Mon, 07 Sep 2026</span></div>
+            <h2 class="title-fa">خرید بلیط — اجلاس جهانی کسب و کار ووگ: نیویورک</h2>
+            <a class="link" href="https://www.vogue.com/article/buy-a-ticket-vogue-business-global-summit-new-york" target="_blank" rel="noopener">دیدن گالری — Vogue ↗</a>
+          </div>
+        </article>
+        <article class="card photo-card">
+          <div class="card-img" style="height:280px"><img src="https://media.vanityfair.com/photos/6a9dc040076df4eaf8f8d8e8/master/pass/THE%20DEBUT_03%20_previously%20approved_.jpg" loading="lazy" onerror="this.style.display='none'"></div>
+          <div class="card-body">
+            <div class="meta"><span class="badge">Vanity Fair</span><span class="date">Mon, 07 Sep 2026</span></div>
+            <h2 class="title-fa">در «اولین»، جولیان مور آواز خواندن را یاد می‌گیرد</h2>
+            <a class="link" href="https://www.vanityfair.com/story/julianne-moore-the-debut-interview-telluride" target="_blank" rel="noopener">دیدن گالری — Vanity Fair ↗</a>
+          </div>
+        </article>
+        <article class="card photo-card">
+          <div class="card-img" style="height:280px"><img src="https://media.vanityfair.com/photos/6a9efd4d124e9ed4c46a8d28/master/pass/2293901383" loading="lazy" onerror="this.style.display='none'"></div>
+          <div class="card-body">
+            <div class="meta"><span class="badge">Vanity Fair</span><span class="date">Mon, 07 Sep 2026</span></div>
+            <h2 class="title-fa">به‌روزرسانی‌های زنده جشنواره فیلم پاییزی ۲۰۲۶: ورودها، نقدها و موارد دیگر</h2>
+            <a class="link" href="https://www.vanityfair.com/live/2026-fall-film-festivals" target="_blank" rel="noopener">دیدن گالری — Vanity Fair ↗</a>
+          </div>
+        </article>
+        <article class="card photo-card">
+          <div class="card-img" style="height:280px"><img src="https://media.vanityfair.com/photos/6a9efc6471e55cc3491c7a26/master/pass/2293529982" loading="lazy" onerror="this.style.display='none'"></div>
+          <div class="card-body">
+            <div class="meta"><span class="badge">Vanity Fair</span><span class="date">Mon, 07 Sep 2026</span></div>
+            <h2 class="title-fa">تمام سلبریتی‌های حاضر در جشنواره فیلم ونیز ۲۰۲۶</h2>
+            <a class="link" href="https://www.vanityfair.com/photos/red-carpet-fashion-celebrities-2026-venice-film-festival" target="_blank" rel="noopener">دیدن گالری — Vanity Fair ↗</a>
+          </div>
+        </article>
+        <article class="card photo-card">
+          <div class="card-img" style="height:280px"><img src="https://assets.vogue.com/photos/6a9ef7ca55e38e30bc265c6d/master/pass/BGUS_3675087_001.jpg" loading="lazy" onerror="this.style.display='none'"></div>
+          <div class="card-body">
+            <div class="meta"><span class="badge">Vogue</span><span class="date">Mon, 07 Sep 2026</span></div>
+            <h2 class="title-fa">ریحانا پالت رنگ پاییزی خود را پیدا کرده است - با یک تغییر مناسب ریحانا</h2>
+            <a class="link" href="https://www.vogue.com/article/rihanna-has-found-her-fall-color-palette" target="_blank" rel="noopener">دیدن گالری — Vogue ↗</a>
+          </div>
+        </article>
+        <article class="card photo-card">
+          <div class="card-img" style="height:280px"><img src="https://assets.vogue.com/photos/6a9995d34f02302713cff964/master/pass/1159473485" loading="lazy" onerror="this.style.display='none'"></div>
+          <div class="card-body">
+            <div class="meta"><span class="badge">Vogue</span><span class="date">Mon, 07 Sep 2026</span></div>
+            <h2 class="title-fa">چرا باید پاییز امسال از لوکیشن اصلی فیلمبرداری «جادوی عملی» دیدن کنید؟</h2>
+            <a class="link" href="https://www.vogue.com/article/where-was-practical-magic-filmed" target="_blank" rel="noopener">دیدن گالری — Vogue ↗</a>
+          </div>
+        </article></div>
+  </section>
+  <section id="industry" class="section s-industry">
+    <div class="section-head"><span class="dot"></span><h2 class="section-title">🎬 اخبار سینما و صنعت</h2><span class="section-sub">Deadline · Hollywood Reporter · Variety</span></div>
+    <div class="grid">
         <article class="card">
           <div class="card-img"><img src="https://deadline.com/wp-content/uploads/2026/08/Musk-courtesy-Venice-Film-Festival.png" loading="lazy" onerror="this.style.display='none'"></div>
           <div class="card-body">
@@ -98,118 +238,7 @@
             <a class="link" href="https://variety.com/2026/film/news/elsinore-telluride-film-festival-andrew-scott-simon-stone-1236854213/" target="_blank" rel="noopener">منبع اصلی — Variety ↗</a>
           </div>
         </article></div>
-  <h2 class="section-title">✨ حواشی سلبریتی‌ها <span>E! Online · Just Jared · ET Online</span></h2>
-  <div class="grid">
-        <article class="card">
-          <div class="card-img"><img src="https://akns-images.eonline.com/eol_images/Entire_Site/20260907/b35aa8d4-6a49-4bd0-ad26-7ce3c1dee6c6_1788811608.jpg" loading="lazy" onerror="this.style.display='none'"></div>
-          <div class="card-body">
-            <div class="meta"><span class="badge">E! Online</span><span class="date">Mon, 07 Sep 2026</span></div>
-            <h2 class="title-fa">بلک چاینا هدیه ۱۴۰ هزار دلاری که در دوران آشنایی به راب کارداشیان داده بود را فاش کرد</h2>
-            <p class="title-en">Blac Chyna Reveals $140,000 Gift She Gave Rob Kardashian While Dating</p>
-            <p class="desc">&lt;img src=&quot;https://akns-images.eonline.com/eol_images/Entire_Site/20260907/b35aa8d4-6a49-4bd0-ad26-7ce3c1dee6c6_1788811608.jpg?fit=around|660:660&quot; height=&quot;660&quot; width=&quot;660&quot; border=&quot;0&quot; alt=&quot;راب کارداشیان، بلک چاینا&quot; align=&quot;left&quot; hspace=&quot;5&quot; /&gt; بلک چاینا رسیدهایش را نگه داشته است. تقریباً 10 سال پس از جدایی‌اش از راب کارداش</p>
-            <a class="link" href="&lt;![CDATA[https://www.eonline.com/news/1435824/blac-chyna-bought-rob-kardashian-s150-000-car-while-dating?cmpid=rss-syndicate-genericrss-us-top_stories]]&gt;" target="_blank" rel="noopener">منبع اصلی — E! Online ↗</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card-img"></div>
-          <div class="card-body">
-            <div class="meta"><span class="badge">Just Jared</span><span class="date">Mon, 07 Sep 2026</span></div>
-            <h2 class="title-fa">«قطره» چه ارتباطی با «بارش برف» دارد؟ بازیگران قدیمی، زمان پخش و نکاتی که باید بدانید</h2>
-            <p class="title-en">How Does ‘The Drop’ Connect to ‘Snowfall’? Returning Cast, Premiere Time &amp; What to Know</p>
-            <p class="desc">سریال «قطره» (The Drop) یک سریال جدید شبکه FX است که این هفته پخش می‌شود و اسپین‌آف سریال تحسین‌شده‌ی «بارش برف» (Snowfall) محسوب می‌شود. این سریال جدید در روز سه‌شنبه، ۸ سپتامبر ۲۰۲۶، ساعت ۹ شب به وقت شرق آمریکا/۶ بعد از ظهر به وقت اقیانوس آرام، از شبکه‌های FX و Hulu پخش خواهد شد و قسمت‌های آن به صورت بین‌المللی از طر</p>
-            <a class="link" href="https://www.justjared.com/2026/09/07/how-does-the-drop-connect-to-snowfall-returning-cast-premiere-time-what-to-know/" target="_blank" rel="noopener">منبع اصلی — Just Jared ↗</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card-img"><img src="https://akns-images.eonline.com/eol_images/Entire_Site/20260907/ac0cb0a3-74e7-4422-84f4-7d6554ec3e8e_1788811075.jpg" loading="lazy" onerror="this.style.display='none'"></div>
-          <div class="card-body">
-            <div class="meta"><span class="badge">E! Online</span><span class="date">Mon, 07 Sep 2026</span></div>
-            <h2 class="title-fa">میلی بابی براون و جیک بونجیوی دختر بچه‌شان را به تعطیلات ایتالیا بردند</h2>
-            <p class="title-en">Millie Bobby Brown, Jake Bongiovi Take Baby Girl on Italian Vacation</p>
-            <p class="desc">&lt;img src=&quot;https://akns-images.eonline.com/eol_images/Entire_Site/20260907/ac0cb0a3-74e7-4422-84f4-7d6554ec3e8e_1788811075.jpg?fit=around|660:660&quot; height=&quot;660&quot; width=&quot;660&quot; border=&quot;0&quot; alt=&quot;میلی بابی براون، جیک بونگیووی&quot; align=&quot;left&quot; hspace=&quot;5&quot; /&gt; میلی بابی براون زندگی شیرینی را سپری می‌کند. ستاره سریال «چیزهای عجیب» نگاه</p>
-            <a class="link" href="&lt;![CDATA[https://www.eonline.com/news/1435822/millie-bobby-brown-husband-jake-bongiovi-take-baby-girl-on-italy-vacation?cmpid=rss-syndicate-genericrss-us-top_stories]]&gt;" target="_blank" rel="noopener">منبع اصلی — E! Online ↗</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card-img"></div>
-          <div class="card-body">
-            <div class="meta"><span class="badge">Just Jared</span><span class="date">Mon, 07 Sep 2026</span></div>
-            <h2 class="title-fa">آیا آیدان کوئین در «جادوی عملی ۲» حضور دارد؟</h2>
-            <p class="title-en">Is Aidan Quinn in ‘Practical Magic 2’?</p>
-            <p class="desc">متاسفانه آیدان کوئین با وجود بازی در فیلم اصلی محصول سال ۱۹۹۸، جزو بازیگران فیلم Practical Magic 2 نیست. این بازیگر ۶۷ ساله در فیلم اول نقش کارآگاه گری هالت را بازی کرد که معشوقه شخصیت سالی اوونز با بازی ساندرا بولاک شد. چرا آیدان کوئین در Practical Magic 2 نیست؟ آیدان در فوریه ۲۰۲۶ در گفتگویی با SPIN 1038 فاش کرد که ا</p>
-            <a class="link" href="https://www.justjared.com/2026/09/07/is-aidan-quinn-in-practical-magic-2/" target="_blank" rel="noopener">منبع اصلی — Just Jared ↗</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card-img"><img src="https://akns-images.eonline.com/eol_images/Entire_Site/20260902/62069fb4-acce-4ff4-9002-2e676a66c2ac_1788373880.jpg" loading="lazy" onerror="this.style.display='none'"></div>
-          <div class="card-body">
-            <div class="meta"><span class="badge">E! Online</span><span class="date">Mon, 07 Sep 2026</span></div>
-            <h2 class="title-fa">جولیا استایلز و ازرا سوسا از DWTS به پست &quot;Shady&quot; جولیارد واکنش نشان می‌دهند</h2>
-            <p class="title-en">DWTS&#x27; Julia Stiles and Ezra Sosa React to Juilliard&#x27;s &quot;Shady” Post</p>
-            <p class="desc">&lt;img src=&quot;https://akns-images.eonline.com/eol_images/Entire_Site/20260902/62069fb4-acce-4ff4-9002-2e676a66c2ac_1788373880.jpg?fit=around|660:660&quot; height=&quot;660&quot; width=&quot;660&quot; border=&quot;0&quot; alt=&quot;بازیگران فصل ۳۵ برنامه «رقص با ستارگان» از شبکه ABC، جولیا استایلز و ازرا سوسا&quot; align=&quot;left&quot; hspace=&quot;5&quot; /&gt; ناگفته نماند که جولیا استا</p>
-            <a class="link" href="&lt;![CDATA[https://www.eonline.com/news/1435821/dancing-with-the-stars-julia-stiles-ezra-sosa-react-to-juilliard-post?cmpid=rss-syndicate-genericrss-us-top_stories]]&gt;" target="_blank" rel="noopener">منبع اصلی — E! Online ↗</a>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card-img"></div>
-          <div class="card-body">
-            <div class="meta"><span class="badge">Just Jared</span><span class="date">Mon, 07 Sep 2026</span></div>
-            <h2 class="title-fa">بازیگران سریال «جادوی عملی» از گذشته تا به امروز: جایگاه ستاره‌های اصلی سریال امروز</h2>
-            <p class="title-en">‘Practical Magic’ Cast Then &amp; Now: Where the Original Stars Are Today</p>
-            <p class="desc">گتی خانواده اوونز دوباره دور هم جمع می‌شوند، اما چند چهره آشنا تغییر کرده‌اند. فیلم «جادوی عملی» در سال ۱۹۹۸، ساندرا بولاک و نیکول کیدمن را در نقش خواهران جادوگر سالی و گیلیان اوونز معرفی کرد. دنباله این فیلم در ۱۰ سپتامبر ۲۰۲۶ با حضور ستاره‌های قبلی و اعضای جدید خانواده در سینماهای ایالات متحده اکران می‌شود. برای مشاه</p>
-            <a class="link" href="https://www.justjared.com/2026/09/07/practical-magic-cast-then-and-now/" target="_blank" rel="noopener">منبع اصلی — Just Jared ↗</a>
-          </div>
-        </article></div>
-  <h2 class="section-title">📸 فتوشوت‌ها <span>W Magazine · Vogue · Vanity Fair</span></h2>
-  <div class="grid">
-        <article class="card photo-card">
-          <div class="card-img" style="height:280px"><img src="https://assets.vogue.com/photos/6a9eba761917411389af6147/master/pass/VB-GS-NYC-ARTICLE-STORY.jpg" loading="lazy" onerror="this.style.display='none'"></div>
-          <div class="card-body">
-            <div class="meta"><span class="badge">Vogue</span><span class="date">Mon, 07 Sep 2026</span></div>
-            <h2 class="title-fa">خرید بلیط — اجلاس جهانی کسب و کار ووگ: نیویورک</h2>
-            <a class="link" href="https://www.vogue.com/article/buy-a-ticket-vogue-business-global-summit-new-york" target="_blank" rel="noopener">دیدن گالری — Vogue ↗</a>
-          </div>
-        </article>
-        <article class="card photo-card">
-          <div class="card-img" style="height:280px"><img src="https://media.vanityfair.com/photos/6a9dc040076df4eaf8f8d8e8/master/pass/THE%20DEBUT_03%20_previously%20approved_.jpg" loading="lazy" onerror="this.style.display='none'"></div>
-          <div class="card-body">
-            <div class="meta"><span class="badge">Vanity Fair</span><span class="date">Mon, 07 Sep 2026</span></div>
-            <h2 class="title-fa">در «اولین»، جولیان مور آواز خواندن را یاد می‌گیرد</h2>
-            <a class="link" href="https://www.vanityfair.com/story/julianne-moore-the-debut-interview-telluride" target="_blank" rel="noopener">دیدن گالری — Vanity Fair ↗</a>
-          </div>
-        </article>
-        <article class="card photo-card">
-          <div class="card-img" style="height:280px"><img src="https://media.vanityfair.com/photos/6a9efd4d124e9ed4c46a8d28/master/pass/2293901383" loading="lazy" onerror="this.style.display='none'"></div>
-          <div class="card-body">
-            <div class="meta"><span class="badge">Vanity Fair</span><span class="date">Mon, 07 Sep 2026</span></div>
-            <h2 class="title-fa">به‌روزرسانی‌های زنده جشنواره فیلم پاییزی ۲۰۲۶: ورودها، نقدها و موارد دیگر</h2>
-            <a class="link" href="https://www.vanityfair.com/live/2026-fall-film-festivals" target="_blank" rel="noopener">دیدن گالری — Vanity Fair ↗</a>
-          </div>
-        </article>
-        <article class="card photo-card">
-          <div class="card-img" style="height:280px"><img src="https://media.vanityfair.com/photos/6a9efc6471e55cc3491c7a26/master/pass/2293529982" loading="lazy" onerror="this.style.display='none'"></div>
-          <div class="card-body">
-            <div class="meta"><span class="badge">Vanity Fair</span><span class="date">Mon, 07 Sep 2026</span></div>
-            <h2 class="title-fa">تمام سلبریتی‌های حاضر در جشنواره فیلم ونیز ۲۰۲۶</h2>
-            <a class="link" href="https://www.vanityfair.com/photos/red-carpet-fashion-celebrities-2026-venice-film-festival" target="_blank" rel="noopener">دیدن گالری — Vanity Fair ↗</a>
-          </div>
-        </article>
-        <article class="card photo-card">
-          <div class="card-img" style="height:280px"><img src="https://assets.vogue.com/photos/6a9ef7ca55e38e30bc265c6d/master/pass/BGUS_3675087_001.jpg" loading="lazy" onerror="this.style.display='none'"></div>
-          <div class="card-body">
-            <div class="meta"><span class="badge">Vogue</span><span class="date">Mon, 07 Sep 2026</span></div>
-            <h2 class="title-fa">ریحانا پالت رنگ پاییزی خود را پیدا کرده است - با یک تغییر مناسب ریحانا</h2>
-            <a class="link" href="https://www.vogue.com/article/rihanna-has-found-her-fall-color-palette" target="_blank" rel="noopener">دیدن گالری — Vogue ↗</a>
-          </div>
-        </article>
-        <article class="card photo-card">
-          <div class="card-img" style="height:280px"><img src="https://assets.vogue.com/photos/6a9995d34f02302713cff964/master/pass/1159473485" loading="lazy" onerror="this.style.display='none'"></div>
-          <div class="card-body">
-            <div class="meta"><span class="badge">Vogue</span><span class="date">Mon, 07 Sep 2026</span></div>
-            <h2 class="title-fa">چرا باید پاییز امسال از لوکیشن اصلی فیلمبرداری «جادوی عملی» دیدن کنید؟</h2>
-            <a class="link" href="https://www.vogue.com/article/where-was-practical-magic-filmed" target="_blank" rel="noopener">دیدن گالری — Vogue ↗</a>
-          </div>
-        </article></div>
+  </section>
 </main>
 <footer class="wrap">© hollywoodi-fa · GitHub Pages · منابع: Deadline, HR, Variety, E! Online, Just Jared, ET, W Magazine, Vogue, Vanity Fair</footer>
 </body>
