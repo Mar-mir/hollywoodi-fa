@@ -1,5 +1,17 @@
 [
   {
+    "id": "061b72cc",
+    "title": "‘Company’ Stars Nick Nolte, Adelaide Clemens on the Film’s Power of Stillness",
+    "title_fa": "نیک نولتی، آدلاید کلمنس در فیلم «قدرت سکون» بازیگران «شرکت» هستند.",
+    "desc": "",
+    "desc_fa": " ",
+    "link": "https://variety.com/2026/film/festivals/company-nick-nolte-adelaide-clemens-venice-1236847583/",
+    "source": "Variety",
+    "group": "industry",
+    "pubDate": "Wed, 09 Sep 2026 06:05:00 +0000",
+    "img": "https://variety.com/wp-content/uploads/2026/08/Company_04072025_DS_0105.jpg"
+  },
+  {
     "id": "efafc31f",
     "title": "‘When In Rome’ Lyrics: Dove Cameron Sings About Falling In Love In Italy – Listen & Watch the Music Video!",
     "title_fa": "متن آهنگ \"When In Rome\": Dove Cameron در مورد عاشق شدن در ایتالیا می خواند - موزیک ویدیو را گوش کنید و تماشا کنید!",
@@ -132,18 +144,6 @@
     "img": ""
   },
   {
-    "id": "b27606ba",
-    "title": "Federal Film & TV Tax Credits Not A Done Deal, Adam Schiff Says; White House Involved: “Negotiations Are Ongoing”",
-    "title_fa": "آدام شیف می‌گوید اعتبارهای مالیاتی فدرال فیلم و تلویزیون هنوز قطعی نشده است؛ کاخ سفید در این زمینه دخیل است: «مذاکرات در حال انجام است»",
-    "desc": "",
-    "desc_fa": " ",
-    "link": "https://deadline.com/2026/09/federal-film-tv-tax-credits-latest-1237071772/",
-    "source": "Deadline",
-    "group": "industry",
-    "pubDate": "Wed, 09 Sep 2026 03:02:54 +0000",
-    "img": "https://deadline.com/wp-content/uploads/2026/09/adam-schiff-donald-trump.jpg"
-  },
-  {
     "id": "3106dd48",
     "title": "Who Is Katie Holmes’s Artist Boyfriend?",
     "title_fa": "دوست پسر هنرمند کیتی هولمز کیست؟",
@@ -214,6 +214,18 @@
     "group": "photo",
     "pubDate": "Tue, 08 Sep 2026 19:07:36 +0000",
     "img": "https://assets.vogue.com/photos/6aa0554633686396d20f4ee0/master/pass/260825_VogueShopping_Cartier_2_V1_CROP.jpg"
+  },
+  {
+    "id": "b27606ba",
+    "title": "Federal Film & TV Tax Credits Not A Done Deal, Adam Schiff Says; White House Involved: “Negotiations Are Ongoing”",
+    "title_fa": "آدام شیف می‌گوید اعتبارهای مالیاتی فدرال فیلم و تلویزیون هنوز قطعی نشده است؛ کاخ سفید در این زمینه دخیل است: «مذاکرات در حال انجام است»",
+    "desc": "",
+    "desc_fa": " ",
+    "link": "https://deadline.com/2026/09/federal-film-tv-tax-credits-latest-1237071772/",
+    "source": "Deadline",
+    "group": "industry",
+    "pubDate": "Wed, 09 Sep 2026 03:02:54 +0000",
+    "img": "https://deadline.com/wp-content/uploads/2026/09/adam-schiff-donald-trump.jpg"
   },
   {
     "id": "4dbc7226",
@@ -946,17 +958,5 @@
     "group": "celeb",
     "pubDate": "Tue, 08 Sep 2026 00:05:11 +0000",
     "img": "https://www.justjared.com/wp-content/uploads/2026/09/phoebe-dynevor-cameron-fuller-married-01-788x1182.jpg"
-  },
-  {
-    "id": "ac642789",
-    "title": "Venice Home Crowd Gives Italian Horror ‘The Spiral’ 9-Minute Standing Ovation",
-    "title_fa": "جمعیت خانگی ونیز به تشویق ایستاده 9 دقیقه ای فیلم ترسناک ایتالیایی «مارپیچ» پرداختند",
-    "desc": "",
-    "desc_fa": " ",
-    "link": "https://www.hollywoodreporter.com/movies/movie-news/venice-premiere-italian-horror-the-spiral-1236693484/",
-    "source": "Hollywood Reporter",
-    "group": "industry",
-    "pubDate": "Mon, 07 Sep 2026 23:59:56 +0000",
-    "img": ""
   }
 ]
